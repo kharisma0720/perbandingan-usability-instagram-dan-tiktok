@@ -6,7 +6,9 @@
 <title>Usability Instagram vs TikTok (SUS)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500&display=swap">
 <style>
-:root{--bg:#0B0F14;--card:#151B23;--ink:#F1F5F9;--mu:#A7B0BE;--line:#293241;--ig:#E05AA6;--tt:#2CC4D2;--k:#12303A;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--bg:#000000;--card:#171717;--ink:#FFFFFF;--mu:#B0B0B0;--line:#333333;--ig:#E05AA6;--tt:#2CC4D2;--k:#12303A;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000000;--card:#171717;--ink:#FFFFFF;--mu:#B0B0B0;--line:#333333;--ig:#E05AA6;--tt:#2CC4D2;--k:#12303A;}}
+:root[data-theme="dark"]{--bg:#000000;--card:#171717;--ink:#FFFFFF;--mu:#B0B0B0;--line:#333333;--ig:#E05AA6;--tt:#2CC4D2;--k:#12303A;}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 "IBM Plex Sans",system-ui,sans-serif}
@@ -38,7 +40,6 @@ th,td{padding:6px 10px;text-align:center;border-bottom:1px solid var(--line)}
 th{position:sticky;top:0;background:var(--card);font-weight:500}
 .note{color:var(--mu);font-size:14px;margin-top:12px}
 
-/* ===== RESPONSIVE DESIGN ===== */
 canvas{display:block;width:100%!important}
 .fig{width:100%;min-width:0}
 section{min-width:0;overflow:hidden}
