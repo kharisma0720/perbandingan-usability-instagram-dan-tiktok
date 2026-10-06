@@ -6,9 +6,39 @@
 <title>Usability Instagram vs TikTok (SUS)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500&display=swap">
 <style>
-:root{--bg:#000000;--card:#171717;--ink:#FFFFFF;--mu:#B0B0B0;--line:#333333;--ig:#E05AA6;--tt:#2CC4D2;--k:#12303A;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000000;--card:#171717;--ink:#FFFFFF;--mu:#B0B0B0;--line:#333333;--ig:#E05AA6;--tt:#2CC4D2;--k:#12303A;}}
-:root[data-theme="dark"]{--bg:#000000;--card:#171717;--ink:#FFFFFF;--mu:#B0B0B0;--line:#333333;--ig:#E05AA6;--tt:#2CC4D2;--k:#12303A;}
+:root{
+  --bg:#0F1525;
+  --card:#171E31;
+  --ink:#E8ECF4;
+  --mu:#9AA4B8;
+  --line:#2A334A;
+  --ig:#E05AA6;
+  --tt:#2CC4D2;
+  --k:#12303A;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1525;
+    --card:#171E31;
+    --ink:#E8ECF4;
+    --mu:#9AA4B8;
+    --line:#2A334A;
+    --ig:#E05AA6;
+    --tt:#2CC4D2;
+    --k:#12303A;
+  }
+}
+
+:root[data-theme="dark"]{
+  --bg:#0F1525;
+  --card:#171E31;
+  --ink:#E8ECF4;
+  --mu:#9AA4B8;
+  --line:#2A334A;
+  --ig:#E05AA6;
+  --tt:#2CC4D2;
+  --k:#12303A;
+}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 "IBM Plex Sans",system-ui,sans-serif}
@@ -166,7 +196,7 @@ Chart.defaults.color=MU;Chart.defaults.font.family='"IBM Plex Sans",sans-serif';
 
 // Pastikan grafik mengikuti ukuran layar saat orientasi/perubahan ukuran terjadi.
 window.addEventListener('resize',()=>Chart.instances && Object.values(Chart.instances).forEach(c=>c.resize()));
-document.getElementById('hero').innerHTML=`Perbandingan TikTok Dengan Skor <span class="tt">${f(T.mean)}</span> Dan Instagram <span class="ig">${f(I.mean)}</span>. Dua Platform, Satu Tingkat Kenyamanan`;
+document.getElementById('hero').innerHTML=`Analisis Perbandingan Usability aplikasi TikTok dan Instagram Berdsarkan Skor Sistem Usability Scale (SUS).`;
 // skala
 const bands=[[0,51,'#D64550','F · Awful','< 51'],[51,68,'#F28C38','D · Poor','51–67'],[68,80.3,'#F2C94C','B · Good','68–80,3'],[80.3,100,'#4CAF73','A · Excellent','> 80,3']];
 document.getElementById('scale').innerHTML=`<div class="bands">${bands.map(b=>`<div style="width:${b[1]-b[0]}%;background:${b[2]}"><b>${b[3]}</b><span>${b[4]}</span></div>`).join('')}</div>
